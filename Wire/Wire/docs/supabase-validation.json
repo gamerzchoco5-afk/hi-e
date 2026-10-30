@@ -1,0 +1,16 @@
+{
+  "project_ref": "gbgiotnuzyahfgtwshox",
+  "name": "Wire",
+  "region": "ap-southeast-1",
+  "state": "ACTIVE_HEALTHY",
+  "tables": 15,
+  "all_application_tables_rls": true,
+  "anon_identity_access": false,
+  "chat_password_access": false,
+  "main_message_access": false,
+  "sql_contract": "passed; rolled back",
+  "security_advisor_notices": 0,
+  "test_accounts_remaining": 0,
+  "test_messages_remaining": 0,
+  "duplicate_index_removed": true
+}

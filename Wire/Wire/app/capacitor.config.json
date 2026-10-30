@@ -1,0 +1,13 @@
+{
+  "appId": "dev.wire.app",
+  "appName": "Wire",
+  "webDir": "www",
+  "backgroundColor": "#0b0c0e",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "webContentsDebuggingEnabled": false
+  }
+}

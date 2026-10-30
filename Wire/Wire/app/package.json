@@ -1,0 +1,24 @@
+{
+  "name": "wire-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Wire hybrid app: HTML/CSS/JavaScript packaged as an Android APK with Capacitor",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "sync": "vite build && cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
+    "@capacitor/browser": "^6.0.4",
+    "@capacitor/clipboard": "^6.0.1",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/share": "^6.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0",
+    "vite": "^5.4.11"
+  }
+}

@@ -1,0 +1,40 @@
+# Render Blueprint: one web service runs the whole Wire backend.
+# Render dashboard -> New -> Blueprint -> pick this repo. Then fill the values marked
+# "sync: false" once (they are secrets and are never stored in git).
+services:
+  - type: web
+    name: wire-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install --require-hashes -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: ENVIRONMENT
+        value: production
+      # Same two Supabase logins as before. Upload supabase-ca.crt as a Render
+      # "Secret File" and reference it as sslrootcert=/etc/secrets/supabase-ca.crt
+      - key: DATABASE_URL
+        sync: false
+      - key: CHAT_DATABASE_URL
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: localhost,127.0.0.1
+      - key: SESSION_DAYS
+        value: "7"
+      - key: RATE_LIMITS_ENABLED
+        value: "true"
+      - key: EMAIL_CODE_PEPPER
+        generateValue: true
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM
+        sync: false
